@@ -1,10 +1,6 @@
-parametros = new URLSearchParams;
-enter = parametros.get("enter");
-if (enter == false) {
-  window.location.href = "index2.html";
-}
-else if(enter == true) {
-}
-else {
+const parametros = new URLSearchParams(window.location.search);
+const enter = parametros.get("enter");
+
+if (enter !== "true") { // Check if enter is NOT explicitly "true"
   window.location.href = "index2.html";
 }
